@@ -1,5 +1,4 @@
 <template>
-
 <div class="row">
   <div class="col-8 me-2">
     <div>
@@ -12,7 +11,6 @@
         </div>
     </div>
     <br/>
-
   </div>
     <div class="row-cols-lg-3">
       <i class="fa fa-user" style="font-size:30px">  Aurora Topojani</i>
@@ -20,7 +18,6 @@
       <i class="fa fa-university" style="font-size: 20px">  South East European University</i>
     </div>
   </div>
-
 </template>
 
 <style scoped>
