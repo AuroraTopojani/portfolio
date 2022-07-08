@@ -1,3 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
+
+.ratio-5x3 {
+  --bs-aspect-ratio: calc(3 / 5 * 100%);
+}
+.bg-header{
+  background-color: #5F9EA0;
+}
+.bg-section13{
+  background-color: #D3D3D3;
+}
+.bg-section2{
+  background-color: grey;
+}

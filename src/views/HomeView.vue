@@ -1,26 +1,21 @@
-<template>
-  <div class="home"></div>
+ <template>
+      <main>
+        <Header />
+        <AboutMe />
+        <CVText />
+      </main>
 
-</template>
+  </template>
 
-<script>
-// @ is an alias to /src
+  <script>
+    import AboutMe from "../components/AboutMe.vue";
+    import Header from "../components/Header.vue";
+    import CVText from "../components/CVText.vue";
+    export default {
+      name: 'HomeView',
+      components: { CVText, Header, AboutMe },
+    };
+  </script>
+  <style lang="scss">
+  </style>
 
-
-export default {
-  name: 'HomeView',
-  components:{
-
-  }
-}
-
-
-</script>
-<style lang="scss">
-h1{
-  font-weight: bold;
-  margin-top: 100px;
-
-}
-
-</style>
