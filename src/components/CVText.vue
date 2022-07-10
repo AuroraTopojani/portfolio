@@ -1,15 +1,37 @@
 <template>
   <main class="container-fluid">
-    <div class="row d-flex shadow justify-content-center">
-      <div class="col-sm-7 col-lg-3 p-5 rounded-top bg-section13">
-        <div v-for="info in PersonalInfoObj" :key="info.title">
+    <div class="row d-flex justify-content-center page-content">
+      <div class="container">
+        <section class="col-sm-10 col-md-10 col-lg-12 rounded-top bg-section13 text-center" id="about">
+          <div class=" d-flex justify-content-center pt-3  ">
+            <h1> <span class="text-primary ">About me</span></h1>
+          </div>
+          <hr />
+          <div class=" justify-content-center col-sm-2 col-md-10 col-lg-12 ps-5 pe-5">
+            <blockquote class="blockquote">
+            <p>I am a 21 year old hardworking and ambitious student with great passion,
+            working in online/digital services.
+            I am currently in my third year of studying Computer Sciences at South
+            East European University.
+            I have excellent communication skills, enabling me to effectively
+            collaborate with a wide range of people. Eager and motivated to
+            achieve team objectives and goals. I am seeking a position in the
+            industry, in which I can put into practice my knowledge and
+            experience. Well-versed in the Office suite,Google Spreadsheets <br />
+            and currently studying programming and markup languages such as HTML, CSS,
+            Java, C++, Asp .NET, SpringBoot.
+            </p>
+            </blockquote>
+          </div>
+
+           <div v-for="info in PersonalInfoObj" :key="info.title">
           <PersonalInfo
               :classIcon="info.iconClass"
               :title="info.title"
               :description="info.description"
           />
-        </div>
-        <div>
+          </div>
+         <div>
           <PersonalInfo
               classIcon="fa-wrench"
               title="Skills"
@@ -21,12 +43,12 @@
             <p>{{ skill.nameSkill }}</p>
           </div>
         </div>
-      </div>
+         </section>
 
-      <div class="col-sm-7 col-lg-3 p-5 shadow rounded-top bg-section2">
+      <section id="education">
+       <div class="col-sm-2 col-md-10 col-lg-12 px-2  rounded-top bg-section2 text-center">
         <i class="fa fa-graduation-cap fa-2x py-2" aria-hidden="true"
-        >Education</i
-        >
+        >Education</i>
         <div v-for="info in EducationInfoObj" :key="info.title">
           <EducationInfo
               :title="info.title"
@@ -34,16 +56,17 @@
               :description="info.description"
           />
         </div>
-        <div class="col-sm-7 col-lg-12 p-5 rounded-start shadow bg-section13">
+        <div class="col-sm-7 col-md-10 col-lg-5 rounded-start shadow bg-section13 mx-auto border-1">
           <ProgressBarInfo LanguageName="Albanian(native1)" knowledge="100"/>
           <ProgressBarInfo LanguageName="English" knowledge="80"/>
           <ProgressBarInfo LanguageName="Macedonian" knowledge="75"/>
           <ProgressBarInfo LanguageName="Turkish" knowledge="65"/>
 
         </div>
-      </div>
-
-      <div class="col-sm-7 col-lg-3 p-5 shadow rounded-3 bg-section13">
+        </div>
+      </section>
+      <section id="experiences">
+      <div class="col-sm-2 col-md-10 col-lg-12 px-2  py-5 rounded-top text-center bg-section13">
         <i class="fa fa-user-plus fa-2x py-2" aria-hidden="true">Experiences</i>
         <div v-for="info in ExperienceInfoObj" :key="info.title">
           <EducationInfo
@@ -53,6 +76,8 @@
           />
         </div>
       </div>
+      </section>
+    </div>
     </div>
   </main>
 </template>

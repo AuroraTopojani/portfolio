@@ -5,12 +5,49 @@ $fa-font-path: "~font-awesome/fonts";
 .ratio-5x3 {
   --bs-aspect-ratio: calc(3 / 5 * 100%);
 }
-.bg-header{
-  background-color: #5F9EA0;
-}
+
 .bg-section13{
-  background-color: #D3D3D3;
+  background-color: #e9ecef;
 }
 .bg-section2{
-  background-color: grey;
+  background-color: #adb5bd;
 }
+.vertical-nav {
+
+
+  width: 14rem;
+  height: 100vh;
+
+  position:fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  background-color: #dc3545;
+
+}
+
+.page-content {
+  width: calc(100% - 10rem);
+  margin-left: 12rem;
+
+
+}
+
+/* for toggle behavior */
+
+
+
+#content.active {
+  width: 100%;
+  margin: 0;
+}
+.text-primary {
+
+
+  font-family: "Arial Rounded MT Bold";
+  color: #dc3545;
+
+}
+
+
+
