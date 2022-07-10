@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid bg-header rounded-pill p-2 shadow">
+  <div class="container-fluid bg-header rounded-pill p-2 shadow sticky-top">
     <div class="row justify-content-center">
       <div class="col-sm-2 col-lg-2 img-fluid">
         <img
@@ -17,11 +17,11 @@
           <h4 class="d-flex justify-content-end mb-1">Social Links</h4>
           <div class="d-flex justify-content-end mb-2">
             <i class="fa fa-linkedin fa-2x " aria-hidden="true"></i>
-            <a class="shadow rounded-1 " style="background-color:lightgrey" href="https://www.linkedin.com/in/aurora-topojani/"> LinkedIn</a>
+            <a href="https://www.linkedin.com/in/aurora-topojani/"> LinkedIn</a>
           </div>
           <div class="d-flex justify-content-end mb-2">
             <i class="fa fa-github fa-2x" aria-hidden="true"></i>
-            <a class="shadow rounded-1" style="background-color:lightgrey" href="https://github.com/AuroraTopojani"> GitHub</a>
+            <a  href="https://github.com/AuroraTopojani"> GitHub</a>
           </div>
         </div>
       </div>

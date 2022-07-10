@@ -1,4 +1,4 @@
-<template >
+<template>
   <main class="container-fluid">
     <div class="row d-flex shadow justify-content-center">
       <div class="col-sm-7 col-lg-3 p-5 rounded-top bg-section13">
@@ -15,8 +15,9 @@
               title="Skills"
               description="My skills"
           />
-
-          <div v-for="skill in Skills" :key="skill.nameSkill">
+          <button @click="isSoftware=true" :disabled="isSoftware">Software Skills</button>
+          <button @click="isSoftware=false" :disabled="!isSoftware">Professional skills</button>
+          <div v-for="skill in showSkills" :key="skill.nameSkill">
             <p>{{ skill.nameSkill }}</p>
           </div>
         </div>
@@ -34,10 +35,10 @@
           />
         </div>
         <div class="col-sm-7 col-lg-12 p-5 rounded-start shadow bg-section13">
-          <ProgressBarInfo LanguageName="Albanian(native1)" knowledge="100" />
-          <ProgressBarInfo LanguageName="English" knowledge="80" />
-          <ProgressBarInfo LanguageName="Macedonian" knowledge="75" />
-          <ProgressBarInfo LanguageName="Turkish" knowledge="65" />
+          <ProgressBarInfo LanguageName="Albanian(native1)" knowledge="100"/>
+          <ProgressBarInfo LanguageName="English" knowledge="80"/>
+          <ProgressBarInfo LanguageName="Macedonian" knowledge="75"/>
+          <ProgressBarInfo LanguageName="Turkish" knowledge="65"/>
 
         </div>
       </div>
@@ -63,6 +64,7 @@
 import ProgressBarInfo from "./ProgressBarInfo.vue";
 import PersonalInfo from "./PersonalInfo.vue";
 import EducationInfo from "./EducationInfo.vue";
+
 export default {
   components: {
     PersonalInfo,
@@ -178,10 +180,23 @@ export default {
           nameSkill: "HTML/CSS",
           type: "SoftwareSkill",
         },
-      ],
 
+
+      ],
+      isSoftware: true, // if true show the software skill otherwise general skills
 
     };
-  }
+  },
+  computed: {
+    showSkills() {
+
+      if (this.isSoftware)
+        return this.Skills.filter(item => item.type === "SoftwareSkill")
+      else
+        return this.Skills.filter(item => item.type === "GeneralSkill")
+    }
+  },
+
+
 };
 </script>
